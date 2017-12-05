@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9221b0a0f2f6417f94abc92f7922da15" Name="Diagram1">
+        <EntityTypeShape EntityType="northwestModel.Animal" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.Assay" Width="1.5" PointX="15.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.Authorization" Width="1.5" PointX="5.25" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.Compound" Width="1.5" PointX="13.5" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.CompoundSample" Width="1.5" PointX="15.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.Country" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.Customer" Width="1.5" PointX="7.5" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.Employee" Width="1.5" PointX="10.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.EmployeeType" Width="1.5" PointX="8.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.Equipment" Width="1.5" PointX="2.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.Invoice" Width="1.5" PointX="15" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.LiteratureReference" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.Location" Width="1.5" PointX="5.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.Material" Width="1.5" PointX="18" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.Order" Width="1.5" PointX="12.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.OrderAssay" Width="1.5" PointX="18" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.OrderStatu" Width="1.5" PointX="10.5" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.Payment" Width="1.5" PointX="17.25" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.PaymentType" Width="1.5" PointX="15" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.Region" Width="1.5" PointX="3" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.SampleTest" Width="1.5" PointX="20.25" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.Status" Width="1.5" PointX="15.75" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.sysdiagram" Width="1.5" PointX="2.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.Test" Width="1.5" PointX="18" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.TestCondition" Width="1.5" PointX="4.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.TestEnvironment" Width="1.5" PointX="15.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.TestType" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.User" Width="1.5" PointX="5.25" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="northwestModel.TestMaterial" Width="1.5" PointX="20.25" PointY="2.125" IsExpanded="true" />
+        <AssociationConnector Association="northwestModel.FK_OrderAssay_Assay" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_Customer_Authorization" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_Employee_Authorization" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_CompoundSample_Compound" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_CompoundSample_Employee" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_SampleTest_CompoundSample" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_Location_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_Region_Country" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_Customer_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_Customer_User" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_Order_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_Employee_EmployeeType" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_Employee_Location" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_Employee_User" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_Invoice_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_Payment_Invoice" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_Location_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_TestMaterials_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_Order_OrderStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_OrderAssay_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_OrderAssay_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_SampleTest_OrderAssay" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_Payment_PaymentType" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_SampleTest_Test" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_Test_TestEnvironment" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_Test_TestType" ManuallyRouted="false" />
+        <AssociationConnector Association="northwestModel.FK_TestMaterials_Test" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
