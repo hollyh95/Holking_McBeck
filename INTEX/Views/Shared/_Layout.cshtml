@@ -7,8 +7,9 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/bootstrap")
         <link href="~/Content/Styles.css" rel="stylesheet" />
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+</head>
+<body>    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbarTop">
         <a class="navbar-brand" href="#">Northwest Labs</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation" style="">
             <span class="navbar-toggler-icon"></span>
@@ -33,9 +34,6 @@
             </form>
         </div>
     </nav>
-
-</head>
-<body>    
     <div class="container body-content">
         @RenderBody()
         <hr />

@@ -5,3 +5,13 @@
     width: 40px;
     height: auto;
 }
+
+.navbarTop{
+    position: fixed;
+    padding-top: 0;
+    padding-bottom: 0;
+    top: 0;
+    z-index: 1030;
+    right: 0;
+    left: 0;
+}
