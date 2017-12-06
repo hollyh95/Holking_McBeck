@@ -40,5 +40,26 @@ namespace INTEX.Controllers
 
             return View();
         }
+
+        public ActionResult Employee()
+        {
+            ViewBag.Message = "Employee Portal";
+
+            return View();
+        }
+
+        public ActionResult SalesRep()
+        {
+            ViewBag.Message = "SalesRep Portal";
+
+            return View();
+        }
+
+        public ActionResult Pharmacolgy()
+        {
+            ViewBag.Message = "Pharmacolgy Portal";
+
+            return View();
+        }
     }
 }
