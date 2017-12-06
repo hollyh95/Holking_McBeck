@@ -26,12 +26,18 @@ namespace INTEX.Models
         public int EquipmentID { get; set; }
 
         [DisplayName("Equipment Description")]
+        [Required]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string EquipmentDesc { get; set; }
 
         [DisplayName("Purchase Cost")]
+        [Required]
+        [DataType(DataType.Currency, ErrorMessage = "Please enter cost of equipment in US Dollars.")]
         public Nullable<decimal> PurchaseCost { get; set; }
 
         [DisplayName("Cost Per Hour")]
+        [Required]
+        [DataType(DataType.Currency, ErrorMessage = "Please enter cost of equipment to operate per hour in US Dollars.")]
         public Nullable<decimal> CostPerHour { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

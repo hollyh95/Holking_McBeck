@@ -25,6 +25,8 @@ namespace INTEX.Models
         public int LiteratureReferenceID { get; set; }
 
         [DisplayName("Literature Reference Title")]
+        [Required]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string LiteratureReferenceDesc { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
