@@ -26,6 +26,8 @@ namespace INTEX.Models
         public int StatusID { get; set; }
 
         [DisplayName("Status Description")]
+        [Required]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string StatusDesc { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

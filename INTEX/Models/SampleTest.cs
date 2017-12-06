@@ -34,18 +34,25 @@ namespace INTEX.Models
         public Nullable<int> CompoundSampleID { get; set; }
 
         [DisplayName("Test Conducting Cost")]
+        [Required]
+        [DataType(DataType.Currency, ErrorMessage = "Please enter test conducting cost in US Dollars.")]
         public Nullable<decimal> ConductingCost { get; set; }
 
         [DisplayName("Base Price")]
+        [Required]
+        [DataType(DataType.Currency, ErrorMessage = "Please enter base price cost in US Dollars.")]
         public Nullable<decimal> BasePrice { get; set; }
 
-        [DisplayName("Test Sample Weight")]
+        [DisplayName("Test Sample Weight (mg)")]
+        [Required]
         public Nullable<int> SampleTestWeight { get; set; }
 
         [DisplayName("Test Sample Concentration (mg/mL)")]
+        [Required]
         public Nullable<decimal> SampleTestConcentration { get; set; }
 
         [DisplayName("Test Completed")]
+        [Required]
         public Nullable<int> TestCompleted { get; set; }
 
         public virtual CompoundSample CompoundSample { get; set; }
