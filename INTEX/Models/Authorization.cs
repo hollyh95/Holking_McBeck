@@ -26,6 +26,8 @@ namespace INTEX.Models
         public int AuthID { get; set; }
 
         [DisplayName("Authorization Name")]
+        [Required]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string AuthName { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -26,6 +26,9 @@ namespace INTEX.Models
         public int CountryID { get; set; }
 
         [DisplayName("Country Name")]
+        [Required]
+        [RegularExpression(@"^[A-Z][a-zA-Z\s", ErrorMessage = "Please enter a valid country name.")]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string CountryName { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

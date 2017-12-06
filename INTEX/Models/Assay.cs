@@ -27,12 +27,18 @@ namespace INTEX.Models
         public int AssayID { get; set; }
 
         [DisplayName("Assay Name")]
+        [Required]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string AssayName { get; set; }
 
         [DisplayName("Assay Protocol")]
+        [Required]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string AssayProtocol { get; set; }
 
         [DisplayName("Assay Estimated Days to Complete")]
+        [Required]
+        [RegularExpression(@"^[0-9]*$", ErrorMessage = "Enter number days to complete Assay.")]
         public Nullable<int> EstimatedDaysToComplete { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
