@@ -2,10 +2,17 @@
 @{
     ViewBag.Title = "Employee";
 }
+<head>
+    <link href="~/Content/Styles.css" rel="stylesheet" />
+</head>
 
 <h2>Employee</h2>
 
-@Html.ActionLink("Update Billing »", "Employee", "Home", null, new { @class = "btn btn-outline-info", style= "width: 200px; height=200px;" })
-@Html.ActionLink("Update Assay Results»", "Employee", "Home", null, new { @class = "btn btn-outline-info" })
-@Html.ActionLink("View Assay Results »", "Employee", "Home", null, new { @class = "btn btn-outline-info" })
-@Html.ActionLink("Download Report Summary »", "Employee", "Home", null, new { @class = "btn btn-outline-info" })
+<br />
+<div>@Html.ActionLink("Update Billing »", "Contact", "Home", null, new { @class = "btn btn-outline-info" })</div>
+<br />
+<div>@Html.ActionLink("Update Assay »", "Contact", "Home", null, new { @class = "btn btn-outline-info" })</div>
+<br />
+<div>@Html.ActionLink("View Assay Results »", "Contact", "Home", null, new { @class = "btn btn-outline-info" })</div>
+<br />
+<div>@Html.ActionLink("View Written Report Summary »", "Contact", "Home", null, new { @class = "btn btn-outline-info" })</div>
