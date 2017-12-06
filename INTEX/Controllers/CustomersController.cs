@@ -17,7 +17,7 @@ namespace INTEX.Controllers
         // GET: Customers
         public ActionResult Index()
         {
-            var customers = db.Customers.Include(c => c.Authorization).Include(c => c.Location).Include(c => c.User);
+            var customers = db.Customers.Include(c => c.Authorization).Include(c => c.Location);//.Include(c => c.User);
             return View(customers.ToList());
         }
 
@@ -41,7 +41,7 @@ namespace INTEX.Controllers
         {
             ViewBag.AuthID = new SelectList(db.Authorizations, "AuthID", "AuthName");
             ViewBag.LocID = new SelectList(db.Locations, "LocID", "City");
-            ViewBag.UserID = new SelectList(db.Users, "UserID", "Password");
+            //ViewBag.UserID = new SelectList(db.Users, "UserID", "Password");
             return View();
         }
 
@@ -61,7 +61,7 @@ namespace INTEX.Controllers
 
             ViewBag.AuthID = new SelectList(db.Authorizations, "AuthID", "AuthName", customer.AuthID);
             ViewBag.LocID = new SelectList(db.Locations, "LocID", "City", customer.LocID);
-            ViewBag.UserID = new SelectList(db.Users, "UserID", "Password", customer.UserID);
+            //ViewBag.UserID = new SelectList(db.Users, "UserID", "Password", customer.UserID);
             return View(customer);
         }
 
@@ -79,7 +79,7 @@ namespace INTEX.Controllers
             }
             ViewBag.AuthID = new SelectList(db.Authorizations, "AuthID", "AuthName", customer.AuthID);
             ViewBag.LocID = new SelectList(db.Locations, "LocID", "City", customer.LocID);
-            ViewBag.UserID = new SelectList(db.Users, "UserID", "Password", customer.UserID);
+            //ViewBag.UserID = new SelectList(db.Users, "UserID", "Password", customer.UserID);
             return View(customer);
         }
 
@@ -98,7 +98,7 @@ namespace INTEX.Controllers
             }
             ViewBag.AuthID = new SelectList(db.Authorizations, "AuthID", "AuthName", customer.AuthID);
             ViewBag.LocID = new SelectList(db.Locations, "LocID", "City", customer.LocID);
-            ViewBag.UserID = new SelectList(db.Users, "UserID", "Password", customer.UserID);
+            //ViewBag.UserID = new SelectList(db.Users, "UserID", "Password", customer.UserID);
             return View(customer);
         }
 
