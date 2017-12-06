@@ -26,5 +26,12 @@ namespace INTEX.Controllers
 
             return View();
         }
+
+        public ActionResult Client()
+        {
+            ViewBag.Message = "Client Portal";
+
+            return View();
+        }
     }
 }
