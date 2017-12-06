@@ -29,7 +29,7 @@ namespace INTEX.Models
         public string CustStreetAddress2 { get; set; }
         public Nullable<int> LocID { get; set; }
         public Nullable<int> AuthID { get; set; }
-        public string UserID { get; set; }
+        public Nullable<string> UserID { get; set; }
     
         public virtual Authorization Authorization { get; set; }
         public virtual Location Location { get; set; }
