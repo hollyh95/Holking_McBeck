@@ -150,9 +150,127 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Animal.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Assay.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AssayTestCatalog.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Authorization.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Compound.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CompoundSample.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Country.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employee.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmployeeTest.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmployeeType.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Equipment.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Invoice.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LiteratureReference.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Location.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Material.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\northwestdatabase.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>northwestdatabase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\northwestdatabase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\northwestdatabase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>northwestdatabase.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Order.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderAssay.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderAssayTest.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OrderStatu.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Payment.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PaymentType.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Region.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SampleTest.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SampleTestEquipment.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SampleTestMaterial.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Status.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Test.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TestCondition.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TestEnvironment.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TestMaterial.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TestType.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>northwestdatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -171,10 +289,27 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\northwestdatabase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>northwestdatabase.edmx</DependentUpon>
+      <LastGenOutput>northwestdatabase.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\northwestdatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>northwestdatabase.edmx</DependentUpon>
+      <LastGenOutput>northwestdatabase.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="Models\northwestdatabase.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>northwestdatabase.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\northwestdatabase.edmx.diagram">
+      <DependentUpon>northwestdatabase.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -206,10 +341,14 @@
     <Content Include="Views\Employees\Details.cshtml" />
     <Content Include="Views\Employees\Edit.cshtml" />
     <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Customers\Create.cshtml" />
+    <Content Include="Views\Customers\Delete.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
