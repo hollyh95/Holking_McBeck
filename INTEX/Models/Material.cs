@@ -26,12 +26,17 @@ namespace INTEX.Models
         public int MaterialID { get; set; }
 
         [DisplayName("Material Name")]
+        [Required]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string MaterialName { get; set; }
 
         [DisplayName("Material Cost per Kilogram")]
+        [Required]
+        [DataType(DataType.Currency, ErrorMessage = "Enter cost of material per kilogram in US Dollars.")]
         public Nullable<decimal> MaterialCostPerKg { get; set; }
 
         [DisplayName("Materials on Hand (kilograms)")]
+        [Required]
         public Nullable<decimal> MaterialOnHand { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -23,24 +23,37 @@ namespace INTEX.Models
         }
 
         public int InvoiceID { get; set; }
+
         public Nullable<int> OrderID { get; set; }
 
         [DisplayName("Payment Due Date")]
+        [Required]
+        [DataType(DataType.Date, ErrorMessage = "Please enter a valid date.")]
         public Nullable<System.DateTime> PaymentDueDate { get; set; }
 
         [DisplayName("Early Payment Date")]
+        [Required]
+        [DataType(DataType.Date, ErrorMessage = "Please enter a valid date.")]
         public Nullable<System.DateTime> EarlyPaymentDate { get; set; }
 
         [DisplayName("Early Payment Discount (Dollars)")]
+        [Required]
+        [DataType(DataType.Currency, ErrorMessage = "Please enter the early payment discount US dollars.")]
         public Nullable<decimal> EarlyPaymentDiscount { get; set; }
 
         [DisplayName("Date Sent")]
+        [Required]
+        [DataType(DataType.Date, ErrorMessage = "Please enter a valid date.")]
         public Nullable<System.DateTime> SentDate { get; set; }
 
         [DisplayName("Advanced Payment Amount")]
+        [Required]
+        [DataType(DataType.Currency, ErrorMessage = "Please enter advanced payment amount in US dollars.")]
         public Nullable<decimal> AdvancedAmount { get; set; }
 
         [DisplayName("Running Balance")]
+        [Required]
+        [DataType(DataType.Currency, ErrorMessage = "Please enter running balance in US dollars.")]
         public Nullable<decimal> RunningBalance { get; set; }
 
         public virtual Order Order { get; set; }
