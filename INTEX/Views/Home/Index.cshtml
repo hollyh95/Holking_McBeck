@@ -29,28 +29,31 @@
 
     <div class="row">
         <div class="col-md-4">
-            <h2>Getting started</h2>
+            <h2>Client Workspace</h2>
             <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
+               We work with clients globally to supply our customers with 
+                a very detailed report on their compound. The pharmaceutical labs test 
+                the compounds thoroughly, ensuring that there are no inconsistencies or deficiencies. Results are 
+                then sent back to the client. Here, Current and potential customers can access information about Northwest Labs and its structure.
             </p>
-            <button type="button" class="btn btn-outline-info" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</button>
+            <button type="button" class="btn btn-outline-info" href="https://go.microsoft.com/fwlink/?LinkId=301865">Enter Client Workspace &raquo;</button>
             <br />
             <br />
         </div>
 
         <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <button type="button" class="btn btn-outline-info" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</button>
+            <h2>Employee Workspace</h2>
+            <p>Employees have the responsibility and pleasure of providing you with the best quality testing and confidence in your product.
+            Here, employees update orders, invoicing, prices and quotes to ensure our clients
+            have current and up-to-date information.</p>
+            <button type="button" class="btn btn-outline-info" href="https://go.microsoft.com/fwlink/?LinkId=301865">Enter Employee Workspace &raquo;</button>
             <br />
             <br />
         </div>
 
         <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <button type="button" class="btn btn-outline-info" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</button>
+            <h2>Contact Us</h2>
+            <p>Need help? Visit our Contact page and email us with any questions or inquiries or call 888-178-3849. We would be happy to answer your questions and set up a meeting with you. </p>
+            @Html.ActionLink("Contact Us »", "Contact", "Home", null, new { @class = "btn btn-outline-info" })
         </div>
     </div>
