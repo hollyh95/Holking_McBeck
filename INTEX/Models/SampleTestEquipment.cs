@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class SampleTestEquipment
     {
@@ -21,7 +22,7 @@ namespace INTEX.Models
 
         [DisplayName("Hours Used")]
         public Nullable<decimal> HoursUsed { get; set; }
-    
+
         public virtual Equipment Equipment { get; set; }
         public virtual SampleTest SampleTest { get; set; }
     }

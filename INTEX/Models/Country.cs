@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class Country
     {
@@ -21,12 +22,12 @@ namespace INTEX.Models
             this.Locations = new HashSet<Location>();
             this.Regions = new HashSet<Region>();
         }
-    
+
         public int CountryID { get; set; }
 
         [DisplayName("Country Name")]
         public string CountryName { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Location> Locations { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

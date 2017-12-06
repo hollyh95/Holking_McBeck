@@ -6,12 +6,12 @@
 //     Manual changes to this file will be overwritten if the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
 namespace INTEX.Models
 {
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class TestMaterial
     {
@@ -21,7 +21,7 @@ namespace INTEX.Models
 
         [DisplayName("Estimated Material Amount (kilograms)")]
         public int MaterialAmountEst { get; set; }
-    
+
         public virtual Material Material { get; set; }
         public virtual Test Test { get; set; }
     }

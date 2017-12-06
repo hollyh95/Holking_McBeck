@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class OrderAssay
     {
@@ -21,7 +22,7 @@ namespace INTEX.Models
             this.OrderAssayTests = new HashSet<OrderAssayTest>();
             this.SampleTests = new HashSet<SampleTest>();
         }
-    
+
         public int OrderAssayID { get; set; }
         public Nullable<int> OrderID { get; set; }
         public Nullable<int> AssayID { get; set; }
@@ -33,7 +34,7 @@ namespace INTEX.Models
         public Nullable<System.DateTime> EndDateTime { get; set; }
 
         public Nullable<int> StatusID { get; set; }
-    
+
         public virtual Assay Assay { get; set; }
         public virtual Order Order { get; set; }
         public virtual Status Status { get; set; }

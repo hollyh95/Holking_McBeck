@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class Material
     {
@@ -21,7 +22,7 @@ namespace INTEX.Models
             this.SampleTestMaterials = new HashSet<SampleTestMaterial>();
             this.TestMaterials = new HashSet<TestMaterial>();
         }
-    
+
         public int MaterialID { get; set; }
 
         [DisplayName("Material Name")]
@@ -32,7 +33,7 @@ namespace INTEX.Models
 
         [DisplayName("Materials on Hand (kilograms)")]
         public Nullable<decimal> MaterialOnHand { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SampleTestMaterial> SampleTestMaterials { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class EmployeeTest
     {
@@ -20,7 +21,7 @@ namespace INTEX.Models
 
         [DisplayName("Hours Worked")]
         public Nullable<int> HoursWorked { get; set; }
-    
+
         public virtual Employee Employee { get; set; }
         public virtual SampleTest SampleTest { get; set; }
     }

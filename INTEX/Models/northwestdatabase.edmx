@@ -9,17 +9,17 @@
           <Key>
             <PropertyRef Name="AnimalID" />
           </Key>
-          <Property Name="AnimalID" Type="int" Nullable="false" />
-          <Property Name="AnimalDesc" Type="varchar" MaxLength="1" />
+          <Property Name="AnimalID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AnimalDesc" Type="varchar" MaxLength="30" />
           <Property Name="AnimalCost" Type="money" />
         </EntityType>
         <EntityType Name="Assay">
           <Key>
             <PropertyRef Name="AssayID" />
           </Key>
-          <Property Name="AssayID" Type="int" Nullable="false" />
-          <Property Name="AssayName" Type="varchar" MaxLength="1" />
-          <Property Name="AssayProtocol" Type="varchar" MaxLength="1" />
+          <Property Name="AssayID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AssayName" Type="varchar" MaxLength="30" />
+          <Property Name="AssayProtocol" Type="varchar" MaxLength="30" />
           <Property Name="EstimatedDaysToComplete" Type="int" />
         </EntityType>
         <EntityType Name="AssayLiteratureReference">
@@ -43,29 +43,29 @@
           <Key>
             <PropertyRef Name="AuthID" />
           </Key>
-          <Property Name="AuthID" Type="int" Nullable="false" />
-          <Property Name="AuthName" Type="varchar" MaxLength="1" />
+          <Property Name="AuthID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AuthName" Type="varchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="Compound">
           <Key>
             <PropertyRef Name="LabsTestID" />
           </Key>
-          <Property Name="LabsTestID" Type="int" Nullable="false" />
-          <Property Name="CompoundName" Type="varchar" MaxLength="1" />
+          <Property Name="LabsTestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CompoundName" Type="varchar" MaxLength="30" />
           <Property Name="MaximumToleratedDose" Type="decimal" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="CompoundSample">
           <Key>
             <PropertyRef Name="CompoundSampleID" />
           </Key>
-          <Property Name="CompoundSampleID" Type="int" Nullable="false" />
+          <Property Name="CompoundSampleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="LabsTestID" Type="int" />
           <Property Name="CompoundSequenceCode" Type="int" />
           <Property Name="Quantity(MG)" Type="int" />
           <Property Name="DateArrived" Type="date" />
           <Property Name="EmpID" Type="int" />
           <Property Name="DateDue" Type="date" />
-          <Property Name="Appearance" Type="varchar" MaxLength="1" />
+          <Property Name="Appearance" Type="varchar" MaxLength="30" />
           <Property Name="CustomerWeight" Type="decimal" Precision="18" Scale="0" />
           <Property Name="MolecularMass" Type="decimal" Precision="18" Scale="0" />
           <Property Name="ReceiptConfirmationDateTime" Type="datetime" />
@@ -76,41 +76,40 @@
           <Key>
             <PropertyRef Name="CountryID" />
           </Key>
-          <Property Name="CountryID" Type="int" Nullable="false" />
-          <Property Name="CountryName" Type="varchar" MaxLength="1" />
+          <Property Name="CountryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CountryName" Type="varchar" MaxLength="60" />
         </EntityType>
         <EntityType Name="Customer">
           <Key>
             <PropertyRef Name="CustID" />
           </Key>
-          <Property Name="CustID" Type="int" Nullable="false" />
-          <Property Name="CustName" Type="varchar" MaxLength="1" />
-          <Property Name="CustDOB" Type="date" />
-          <Property Name="CustPhone" Type="varchar" MaxLength="1" />
-          <Property Name="CustEmail" Type="varchar" MaxLength="1" />
-          <Property Name="CustStreetAddress1" Type="varchar" MaxLength="1" />
-          <Property Name="CustStreetAddress2" Type="varchar" MaxLength="1" />
+          <Property Name="CustID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CustName" Type="varchar" MaxLength="30" />
+          <Property Name="CustPhone" Type="varchar" MaxLength="30" />
+          <Property Name="CustEmail" Type="varchar" MaxLength="30" />
+          <Property Name="CustStreetAddress1" Type="varchar" MaxLength="30" />
+          <Property Name="CustStreetAddress2" Type="varchar" MaxLength="30" />
           <Property Name="LocID" Type="int" />
           <Property Name="AuthID" Type="int" />
-          <Property Name="UserID" Type="varchar" MaxLength="1" />
+          <Property Name="UserID" Type="varchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="Employee">
           <Key>
             <PropertyRef Name="EmpID" />
           </Key>
-          <Property Name="EmpID" Type="int" Nullable="false" />
-          <Property Name="EmpFirstName" Type="varchar" MaxLength="1" />
-          <Property Name="EmpLastName" Type="varchar" MaxLength="1" />
+          <Property Name="EmpID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EmpFirstName" Type="varchar" MaxLength="30" />
+          <Property Name="EmpLastName" Type="varchar" MaxLength="30" />
           <Property Name="EmpDOB" Type="date" />
-          <Property Name="EmpSSN" Type="varchar" MaxLength="1" />
-          <Property Name="EmpPhone" Type="varchar" MaxLength="1" />
-          <Property Name="EmpEmail" Type="varchar" MaxLength="1" />
-          <Property Name="EmpStreetAddress1" Type="varchar" MaxLength="1" />
-          <Property Name="EmpStreetAddress2" Type="varchar" MaxLength="1" />
+          <Property Name="EmpSSN" Type="varchar" MaxLength="30" />
+          <Property Name="EmpPhone" Type="varchar" MaxLength="30" />
+          <Property Name="EmpEmail" Type="varchar" MaxLength="30" />
+          <Property Name="EmpStreetAddress1" Type="varchar" MaxLength="30" />
+          <Property Name="EmpStreetAddress2" Type="varchar" MaxLength="30" />
           <Property Name="LocID" Type="int" />
           <Property Name="AuthID" Type="int" />
           <Property Name="Wage" Type="money" />
-          <Property Name="UserID" Type="varchar" MaxLength="1" />
+          <Property Name="UserID" Type="varchar" MaxLength="30" />
           <Property Name="EmpTypeID" Type="int" />
         </EntityType>
         <EntityType Name="EmployeeTest">
@@ -126,14 +125,14 @@
           <Key>
             <PropertyRef Name="EmpTypeID" />
           </Key>
-          <Property Name="EmpTypeID" Type="int" Nullable="false" />
+          <Property Name="EmpTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="EmpTypeDesc" Type="varchar" MaxLength="1" />
         </EntityType>
         <EntityType Name="Equipment">
           <Key>
             <PropertyRef Name="EquipmentID" />
           </Key>
-          <Property Name="EquipmentID" Type="int" Nullable="false" />
+          <Property Name="EquipmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="EquipmentDesc" Type="varchar" MaxLength="1" />
           <Property Name="PurchaseCost" Type="money" />
           <Property Name="CostPerHour" Type="money" />
@@ -142,7 +141,7 @@
           <Key>
             <PropertyRef Name="InvoiceID" />
           </Key>
-          <Property Name="InvoiceID" Type="int" Nullable="false" />
+          <Property Name="InvoiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="OrderID" Type="int" />
           <Property Name="PaymentDueDate" Type="date" />
           <Property Name="EarlyPaymentDate" Type="date" />
@@ -155,25 +154,25 @@
           <Key>
             <PropertyRef Name="LiteratureReferenceID" />
           </Key>
-          <Property Name="LiteratureReferenceID" Type="int" Nullable="false" />
-          <Property Name="LiteratureReferenceDesc" Type="varchar" MaxLength="1" />
+          <Property Name="LiteratureReferenceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LiteratureReferenceDesc" Type="varchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="Location">
           <Key>
             <PropertyRef Name="LocID" />
           </Key>
-          <Property Name="LocID" Type="int" Nullable="false" />
-          <Property Name="City" Type="varchar" MaxLength="1" />
+          <Property Name="LocID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="City" Type="varchar" MaxLength="30" />
           <Property Name="RegionID" Type="int" />
-          <Property Name="Zip" Type="varchar" MaxLength="1" />
+          <Property Name="Zip" Type="varchar" MaxLength="30" />
           <Property Name="CountryID" Type="int" />
         </EntityType>
         <EntityType Name="Material">
           <Key>
             <PropertyRef Name="MaterialID" />
           </Key>
-          <Property Name="MaterialID" Type="int" Nullable="false" />
-          <Property Name="MaterialName" Type="varchar" MaxLength="1" />
+          <Property Name="MaterialID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaterialName" Type="varchar" MaxLength="30" />
           <Property Name="MaterialCostPerKg" Type="money" />
           <Property Name="MaterialOnHand" Type="decimal" Precision="18" Scale="0" />
         </EntityType>
@@ -181,9 +180,9 @@
           <Key>
             <PropertyRef Name="OrderID" />
           </Key>
-          <Property Name="OrderID" Type="int" Nullable="false" />
+          <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CustID" Type="int" />
-          <Property Name="OrderComments" Type="varchar" MaxLength="1" />
+          <Property Name="OrderComments" Type="varchar" MaxLength="30" />
           <Property Name="OrderStatusID" Type="int" />
           <Property Name="OrderDiscount" Type="money" />
           <Property Name="QuotedPrice" Type="money" />
@@ -194,7 +193,7 @@
           <Key>
             <PropertyRef Name="OrderAssayID" />
           </Key>
-          <Property Name="OrderAssayID" Type="int" Nullable="false" />
+          <Property Name="OrderAssayID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="OrderID" Type="int" />
           <Property Name="AssayID" Type="int" />
           <Property Name="StartDateTime" Type="datetime" />
@@ -206,7 +205,7 @@
             <PropertyRef Name="OrderAssayID" />
             <PropertyRef Name="TestID" />
           </Key>
-          <Property Name="OrderAssayID" Type="int" Nullable="false" />
+          <Property Name="OrderAssayID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TestID" Type="int" Nullable="false" />
           <Property Name="TestConditionID" Type="int" />
           <Property Name="TestConclusive" Type="int" />
@@ -216,14 +215,14 @@
           <Key>
             <PropertyRef Name="OrderStatusID" />
           </Key>
-          <Property Name="OrderStatusID" Type="int" Nullable="false" />
-          <Property Name="OrderStatusDesc" Type="varchar" MaxLength="1" />
+          <Property Name="OrderStatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderStatusDesc" Type="varchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="Payment">
           <Key>
             <PropertyRef Name="PaymentID" />
           </Key>
-          <Property Name="PaymentID" Type="int" Nullable="false" />
+          <Property Name="PaymentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="InvoiceID" Type="int" />
           <Property Name="PaymentAmt" Type="money" />
           <Property Name="PaymentDate" Type="date" />
@@ -233,22 +232,22 @@
           <Key>
             <PropertyRef Name="PaymentTypeID" />
           </Key>
-          <Property Name="PaymentTypeID" Type="int" Nullable="false" />
-          <Property Name="PaymentTypeDesc" Type="varchar" MaxLength="1" />
+          <Property Name="PaymentTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PaymentTypeDesc" Type="varchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="Region">
           <Key>
             <PropertyRef Name="RegionID" />
           </Key>
-          <Property Name="RegionID" Type="int" Nullable="false" />
-          <Property Name="RegionName" Type="varchar" MaxLength="1" />
+          <Property Name="RegionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegionName" Type="varchar" MaxLength="30" />
           <Property Name="CountryID" Type="int" />
         </EntityType>
         <EntityType Name="SampleTest">
           <Key>
             <PropertyRef Name="SampleTestID" />
           </Key>
-          <Property Name="SampleTestID" Type="int" Nullable="false" />
+          <Property Name="SampleTestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="OrderAssayID" Type="int" />
           <Property Name="TestID" Type="int" />
           <Property Name="CompoundSampleID" Type="int" />
@@ -288,8 +287,8 @@
           <Key>
             <PropertyRef Name="StatusID" />
           </Key>
-          <Property Name="StatusID" Type="int" Nullable="false" />
-          <Property Name="StatusDesc" Type="varchar" MaxLength="1" />
+          <Property Name="StatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StatusDesc" Type="varchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -305,8 +304,8 @@
           <Key>
             <PropertyRef Name="TestID" />
           </Key>
-          <Property Name="TestID" Type="int" Nullable="false" />
-          <Property Name="TestName" Type="varchar" MaxLength="1" />
+          <Property Name="TestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TestName" Type="varchar" MaxLength="30" />
           <Property Name="TestTypeID" Type="int" />
           <Property Name="TestEnvironmentID" Type="int" />
         </EntityType>
@@ -322,15 +321,15 @@
           <Key>
             <PropertyRef Name="TestConditionID" />
           </Key>
-          <Property Name="TestConditionID" Type="int" Nullable="false" />
-          <Property Name="TestConditionDesc" Type="varchar" MaxLength="1" />
+          <Property Name="TestConditionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TestConditionDesc" Type="varchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="TestEnvironment">
           <Key>
             <PropertyRef Name="TestEnvironmentID" />
           </Key>
-          <Property Name="TestEnvironmentID" Type="int" Nullable="false" />
-          <Property Name="TestEnvironmentDesc" Type="varchar" MaxLength="1" />
+          <Property Name="TestEnvironmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TestEnvironmentDesc" Type="varchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="TestEquipment">
           <Key>
@@ -353,15 +352,15 @@
           <Key>
             <PropertyRef Name="TestTypeID" />
           </Key>
-          <Property Name="TestTypeID" Type="int" Nullable="false" />
-          <Property Name="TestTypeDesc" Type="varchar" MaxLength="1" />
+          <Property Name="TestTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TestTypeDesc" Type="varchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="UserID" />
           </Key>
-          <Property Name="UserID" Type="varchar" MaxLength="1" Nullable="false" />
-          <Property Name="Password" Type="varchar" MaxLength="1" />
+          <Property Name="UserID" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="30" />
         </EntityType>
         <Association Name="FK_AssayLiteratureReference_Assay">
           <End Role="Assay" Type="Self.Assay" Multiplicity="1" />
@@ -1180,8 +1179,8 @@
           <Key>
             <PropertyRef Name="AnimalID" />
           </Key>
-          <Property Name="AnimalID" Type="Int32" Nullable="false" />
-          <Property Name="AnimalDesc" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="AnimalID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AnimalDesc" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="AnimalCost" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="SampleTests" Relationship="Self.SampleTestAnimal" FromRole="Animal" ToRole="SampleTest" />
           <NavigationProperty Name="Tests" Relationship="Self.TestAnimal" FromRole="Animal" ToRole="Test" />
@@ -1190,9 +1189,9 @@
           <Key>
             <PropertyRef Name="AssayID" />
           </Key>
-          <Property Name="AssayID" Type="Int32" Nullable="false" />
-          <Property Name="AssayName" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="AssayProtocol" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="AssayID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AssayName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="AssayProtocol" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="EstimatedDaysToComplete" Type="Int32" />
           <NavigationProperty Name="AssayTestCatalogs" Relationship="Self.FK_AssayTestCatalog_Assay" FromRole="Assay" ToRole="AssayTestCatalog" />
           <NavigationProperty Name="OrderAssays" Relationship="Self.FK_OrderAssay_Assay" FromRole="Assay" ToRole="OrderAssay" />
@@ -1214,8 +1213,8 @@
           <Key>
             <PropertyRef Name="AuthID" />
           </Key>
-          <Property Name="AuthID" Type="Int32" Nullable="false" />
-          <Property Name="AuthName" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="AuthID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AuthName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Customers" Relationship="Self.FK_Customer_Authorization" FromRole="Authorization" ToRole="Customer" />
           <NavigationProperty Name="Employees" Relationship="Self.FK_Employee_Authorization" FromRole="Authorization" ToRole="Employee" />
         </EntityType>
@@ -1223,8 +1222,8 @@
           <Key>
             <PropertyRef Name="LabsTestID" />
           </Key>
-          <Property Name="LabsTestID" Type="Int32" Nullable="false" />
-          <Property Name="CompoundName" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="LabsTestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompoundName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="MaximumToleratedDose" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="CompoundSamples" Relationship="Self.FK_CompoundSample_Compound" FromRole="Compound" ToRole="CompoundSample" />
         </EntityType>
@@ -1232,14 +1231,14 @@
           <Key>
             <PropertyRef Name="CompoundSampleID" />
           </Key>
-          <Property Name="CompoundSampleID" Type="Int32" Nullable="false" />
+          <Property Name="CompoundSampleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="LabsTestID" Type="Int32" />
           <Property Name="CompoundSequenceCode" Type="Int32" />
           <Property Name="Quantity_MG_" Type="Int32" />
           <Property Name="DateArrived" Type="DateTime" Precision="0" />
           <Property Name="EmpID" Type="Int32" />
           <Property Name="DateDue" Type="DateTime" Precision="0" />
-          <Property Name="Appearance" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Appearance" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="CustomerWeight" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="MolecularMass" Type="Decimal" Precision="18" Scale="0" />
           <Property Name="ReceiptConfirmationDateTime" Type="DateTime" Precision="3" />
@@ -1253,8 +1252,8 @@
           <Key>
             <PropertyRef Name="CountryID" />
           </Key>
-          <Property Name="CountryID" Type="Int32" Nullable="false" />
-          <Property Name="CountryName" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CountryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Locations" Relationship="Self.FK_Location_Country" FromRole="Country" ToRole="Location" />
           <NavigationProperty Name="Regions" Relationship="Self.FK_Region_Country" FromRole="Country" ToRole="Region" />
         </EntityType>
@@ -1262,16 +1261,15 @@
           <Key>
             <PropertyRef Name="CustID" />
           </Key>
-          <Property Name="CustID" Type="Int32" Nullable="false" />
-          <Property Name="CustName" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="CustDOB" Type="DateTime" Precision="0" />
-          <Property Name="CustPhone" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="CustEmail" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="CustStreetAddress1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="CustStreetAddress2" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="CustID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CustName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CustPhone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CustEmail" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CustStreetAddress1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CustStreetAddress2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="LocID" Type="Int32" />
           <Property Name="AuthID" Type="Int32" />
-          <Property Name="UserID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="UserID" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Authorization" Relationship="Self.FK_Customer_Authorization" FromRole="Customer" ToRole="Authorization" />
           <NavigationProperty Name="Location" Relationship="Self.FK_Customer_Location" FromRole="Customer" ToRole="Location" />
           <NavigationProperty Name="User" Relationship="Self.FK_Customer_User" FromRole="Customer" ToRole="User" />
@@ -1281,19 +1279,19 @@
           <Key>
             <PropertyRef Name="EmpID" />
           </Key>
-          <Property Name="EmpID" Type="Int32" Nullable="false" />
-          <Property Name="EmpFirstName" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="EmpLastName" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="EmpID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EmpFirstName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="EmpLastName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="EmpDOB" Type="DateTime" Precision="0" />
-          <Property Name="EmpSSN" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="EmpPhone" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="EmpEmail" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="EmpStreetAddress1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
-          <Property Name="EmpStreetAddress2" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="EmpSSN" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="EmpPhone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="EmpEmail" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="EmpStreetAddress1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="EmpStreetAddress2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="LocID" Type="Int32" />
           <Property Name="AuthID" Type="Int32" />
           <Property Name="Wage" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="UserID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="UserID" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="EmpTypeID" Type="Int32" />
           <NavigationProperty Name="Authorization" Relationship="Self.FK_Employee_Authorization" FromRole="Employee" ToRole="Authorization" />
           <NavigationProperty Name="CompoundSamples" Relationship="Self.FK_CompoundSample_Employee" FromRole="Employee" ToRole="CompoundSample" />
@@ -1317,7 +1315,7 @@
           <Key>
             <PropertyRef Name="EmpTypeID" />
           </Key>
-          <Property Name="EmpTypeID" Type="Int32" Nullable="false" />
+          <Property Name="EmpTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="EmpTypeDesc" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Employees" Relationship="Self.FK_Employee_EmployeeType" FromRole="EmployeeType" ToRole="Employee" />
         </EntityType>
@@ -1325,7 +1323,7 @@
           <Key>
             <PropertyRef Name="EquipmentID" />
           </Key>
-          <Property Name="EquipmentID" Type="Int32" Nullable="false" />
+          <Property Name="EquipmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="EquipmentDesc" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
           <Property Name="PurchaseCost" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="CostPerHour" Type="Decimal" Precision="19" Scale="4" />
@@ -1336,7 +1334,7 @@
           <Key>
             <PropertyRef Name="InvoiceID" />
           </Key>
-          <Property Name="InvoiceID" Type="Int32" Nullable="false" />
+          <Property Name="InvoiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="OrderID" Type="Int32" />
           <Property Name="PaymentDueDate" Type="DateTime" Precision="0" />
           <Property Name="EarlyPaymentDate" Type="DateTime" Precision="0" />
@@ -1351,18 +1349,18 @@
           <Key>
             <PropertyRef Name="LiteratureReferenceID" />
           </Key>
-          <Property Name="LiteratureReferenceID" Type="Int32" Nullable="false" />
-          <Property Name="LiteratureReferenceDesc" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="LiteratureReferenceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LiteratureReferenceDesc" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Assays" Relationship="Self.AssayLiteratureReference" FromRole="LiteratureReference" ToRole="Assay" />
         </EntityType>
         <EntityType Name="Location">
           <Key>
             <PropertyRef Name="LocID" />
           </Key>
-          <Property Name="LocID" Type="Int32" Nullable="false" />
-          <Property Name="City" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="LocID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="City" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="RegionID" Type="Int32" />
-          <Property Name="Zip" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Zip" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="CountryID" Type="Int32" />
           <NavigationProperty Name="Country" Relationship="Self.FK_Location_Country" FromRole="Location" ToRole="Country" />
           <NavigationProperty Name="Customers" Relationship="Self.FK_Customer_Location" FromRole="Location" ToRole="Customer" />
@@ -1373,8 +1371,8 @@
           <Key>
             <PropertyRef Name="MaterialID" />
           </Key>
-          <Property Name="MaterialID" Type="Int32" Nullable="false" />
-          <Property Name="MaterialName" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="MaterialID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaterialName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="MaterialCostPerKg" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="MaterialOnHand" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="SampleTestMaterials" Relationship="Self.FK_SampleTestMaterial_Material" FromRole="Material" ToRole="SampleTestMaterial" />
@@ -1384,9 +1382,9 @@
           <Key>
             <PropertyRef Name="OrderID" />
           </Key>
-          <Property Name="OrderID" Type="Int32" Nullable="false" />
+          <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CustID" Type="Int32" />
-          <Property Name="OrderComments" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="OrderComments" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="OrderStatusID" Type="Int32" />
           <Property Name="OrderDiscount" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="QuotedPrice" Type="Decimal" Precision="19" Scale="4" />
@@ -1401,7 +1399,7 @@
           <Key>
             <PropertyRef Name="OrderAssayID" />
           </Key>
-          <Property Name="OrderAssayID" Type="Int32" Nullable="false" />
+          <Property Name="OrderAssayID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="OrderID" Type="Int32" />
           <Property Name="AssayID" Type="Int32" />
           <Property Name="StartDateTime" Type="DateTime" Precision="3" />
@@ -1418,7 +1416,7 @@
             <PropertyRef Name="OrderAssayID" />
             <PropertyRef Name="TestID" />
           </Key>
-          <Property Name="OrderAssayID" Type="Int32" Nullable="false" />
+          <Property Name="OrderAssayID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TestID" Type="Int32" Nullable="false" />
           <Property Name="TestConditionID" Type="Int32" />
           <Property Name="TestConclusive" Type="Int32" />
@@ -1432,15 +1430,15 @@
           <Key>
             <PropertyRef Name="OrderStatusID" />
           </Key>
-          <Property Name="OrderStatusID" Type="Int32" Nullable="false" />
-          <Property Name="OrderStatusDesc" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="OrderStatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrderStatusDesc" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Orders" Relationship="Self.FK_Order_OrderStatus" FromRole="OrderStatus" ToRole="Order" />
         </EntityType>
         <EntityType Name="Payment">
           <Key>
             <PropertyRef Name="PaymentID" />
           </Key>
-          <Property Name="PaymentID" Type="Int32" Nullable="false" />
+          <Property Name="PaymentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="InvoiceID" Type="Int32" />
           <Property Name="PaymentAmt" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="PaymentDate" Type="DateTime" Precision="0" />
@@ -1452,16 +1450,16 @@
           <Key>
             <PropertyRef Name="PaymentTypeID" />
           </Key>
-          <Property Name="PaymentTypeID" Type="Int32" Nullable="false" />
-          <Property Name="PaymentTypeDesc" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="PaymentTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PaymentTypeDesc" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Payments" Relationship="Self.FK_Payment_PaymentType" FromRole="PaymentType" ToRole="Payment" />
         </EntityType>
         <EntityType Name="Region">
           <Key>
             <PropertyRef Name="RegionID" />
           </Key>
-          <Property Name="RegionID" Type="Int32" Nullable="false" />
-          <Property Name="RegionName" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="RegionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegionName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="CountryID" Type="Int32" />
           <NavigationProperty Name="Country" Relationship="Self.FK_Region_Country" FromRole="Region" ToRole="Country" />
           <NavigationProperty Name="Locations" Relationship="Self.FK_Location_Region" FromRole="Region" ToRole="Location" />
@@ -1470,7 +1468,7 @@
           <Key>
             <PropertyRef Name="SampleTestID" />
           </Key>
-          <Property Name="SampleTestID" Type="Int32" Nullable="false" />
+          <Property Name="SampleTestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="OrderAssayID" Type="Int32" />
           <Property Name="TestID" Type="Int32" />
           <Property Name="CompoundSampleID" Type="Int32" />
@@ -1513,8 +1511,8 @@
           <Key>
             <PropertyRef Name="StatusID" />
           </Key>
-          <Property Name="StatusID" Type="Int32" Nullable="false" />
-          <Property Name="StatusDesc" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="StatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StatusDesc" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="OrderAssays" Relationship="Self.FK_OrderAssay_Status" FromRole="Status" ToRole="OrderAssay" />
           <NavigationProperty Name="OrderAssayTests" Relationship="Self.FK_OrderAssayTest_Status" FromRole="Status" ToRole="OrderAssayTest" />
         </EntityType>
@@ -1532,8 +1530,8 @@
           <Key>
             <PropertyRef Name="TestID" />
           </Key>
-          <Property Name="TestID" Type="Int32" Nullable="false" />
-          <Property Name="TestName" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="TestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TestName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="TestTypeID" Type="Int32" />
           <Property Name="TestEnvironmentID" Type="Int32" />
           <NavigationProperty Name="AssayTestCatalogs" Relationship="Self.FK_AssayTestCatalog_Test" FromRole="Test" ToRole="AssayTestCatalog" />
@@ -1549,8 +1547,8 @@
           <Key>
             <PropertyRef Name="TestConditionID" />
           </Key>
-          <Property Name="TestConditionID" Type="Int32" Nullable="false" />
-          <Property Name="TestConditionDesc" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="TestConditionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TestConditionDesc" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="AssayTestCatalogs" Relationship="Self.FK_AssayTestCatalog_TestCondition" FromRole="TestCondition" ToRole="AssayTestCatalog" />
           <NavigationProperty Name="OrderAssayTests" Relationship="Self.FK_OrderAssayTest_TestCondition" FromRole="TestCondition" ToRole="OrderAssayTest" />
         </EntityType>
@@ -1558,8 +1556,8 @@
           <Key>
             <PropertyRef Name="TestEnvironmentID" />
           </Key>
-          <Property Name="TestEnvironmentID" Type="Int32" Nullable="false" />
-          <Property Name="TestEnvironmentDesc" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="TestEnvironmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TestEnvironmentDesc" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Tests" Relationship="Self.FK_Test_TestEnvironment" FromRole="TestEnvironment" ToRole="Test" />
         </EntityType>
         <EntityType Name="TestMaterial">
@@ -1577,16 +1575,16 @@
           <Key>
             <PropertyRef Name="TestTypeID" />
           </Key>
-          <Property Name="TestTypeID" Type="Int32" Nullable="false" />
-          <Property Name="TestTypeDesc" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="TestTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TestTypeDesc" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Tests" Relationship="Self.FK_Test_TestType" FromRole="TestType" ToRole="Test" />
         </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="UserID" />
           </Key>
-          <Property Name="UserID" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Password" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="UserID" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Customers" Relationship="Self.FK_Customer_User" FromRole="User" ToRole="Customer" />
           <NavigationProperty Name="Employees" Relationship="Self.FK_Employee_User" FromRole="User" ToRole="Employee" />
         </EntityType>
@@ -2381,7 +2379,6 @@
               <MappingFragment StoreEntitySet="Customer">
                 <ScalarProperty Name="CustID" ColumnName="CustID" />
                 <ScalarProperty Name="CustName" ColumnName="CustName" />
-                <ScalarProperty Name="CustDOB" ColumnName="CustDOB" />
                 <ScalarProperty Name="CustPhone" ColumnName="CustPhone" />
                 <ScalarProperty Name="CustEmail" ColumnName="CustEmail" />
                 <ScalarProperty Name="CustStreetAddress1" ColumnName="CustStreetAddress1" />

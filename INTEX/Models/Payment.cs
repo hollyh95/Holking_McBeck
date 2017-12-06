@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class Payment
     {
@@ -26,7 +27,7 @@ namespace INTEX.Models
         public Nullable<System.DateTime> PaymentDate { get; set; }
 
         public Nullable<int> PaymentTypeID { get; set; }
-    
+
         public virtual Invoice Invoice { get; set; }
         public virtual PaymentType PaymentType { get; set; }
     }

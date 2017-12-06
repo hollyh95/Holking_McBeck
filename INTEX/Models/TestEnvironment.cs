@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class TestEnvironment
     {
@@ -20,12 +21,12 @@ namespace INTEX.Models
         {
             this.Tests = new HashSet<Test>();
         }
-    
+
         public int TestEnvironmentID { get; set; }
 
         [DisplayName("Test Environment Description")]
         public string TestEnvironmentDesc { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Test> Tests { get; set; }
     }

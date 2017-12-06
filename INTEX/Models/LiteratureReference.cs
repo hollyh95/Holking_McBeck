@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class LiteratureReference
     {
@@ -20,12 +21,12 @@ namespace INTEX.Models
         {
             this.Assays = new HashSet<Assay>();
         }
-    
+
         public int LiteratureReferenceID { get; set; }
 
         [DisplayName("Literature Reference Title")]
         public string LiteratureReferenceDesc { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Assay> Assays { get; set; }
     }

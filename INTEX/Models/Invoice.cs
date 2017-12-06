@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class Invoice
     {
@@ -20,7 +21,7 @@ namespace INTEX.Models
         {
             this.Payments = new HashSet<Payment>();
         }
-    
+
         public int InvoiceID { get; set; }
         public Nullable<int> OrderID { get; set; }
 
@@ -41,7 +42,7 @@ namespace INTEX.Models
 
         [DisplayName("Running Balance")]
         public Nullable<decimal> RunningBalance { get; set; }
-    
+
         public virtual Order Order { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Payment> Payments { get; set; }

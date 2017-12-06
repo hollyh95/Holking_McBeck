@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class CompoundSample
     {
@@ -20,7 +21,7 @@ namespace INTEX.Models
         {
             this.SampleTests = new HashSet<SampleTest>();
         }
-    
+
         public int CompoundSampleID { get; set; }
         public Nullable<int> LabsTestID { get; set; }
 
@@ -55,7 +56,7 @@ namespace INTEX.Models
 
         [DisplayName("Is Solubilized")]
         public Nullable<int> Solubilized { get; set; }
-    
+
         public virtual Compound Compound { get; set; }
         public virtual Employee Employee { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

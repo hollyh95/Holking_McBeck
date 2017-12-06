@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class Employee
     {
@@ -21,7 +22,7 @@ namespace INTEX.Models
             this.CompoundSamples = new HashSet<CompoundSample>();
             this.EmployeeTests = new HashSet<EmployeeTest>();
         }
-    
+
         public int EmpID { get; set; }
 
         [DisplayName("First Name")]
@@ -59,7 +60,7 @@ namespace INTEX.Models
         public string UserID { get; set; }
 
         public Nullable<int> EmpTypeID { get; set; }
-    
+
         public virtual Authorization Authorization { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CompoundSample> CompoundSamples { get; set; }

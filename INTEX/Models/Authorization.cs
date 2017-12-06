@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class Authorization
     {
@@ -21,12 +22,12 @@ namespace INTEX.Models
             this.Customers = new HashSet<Customer>();
             this.Employees = new HashSet<Employee>();
         }
-    
+
         public int AuthID { get; set; }
 
         [DisplayName("Authorization Name")]
         public string AuthName { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Customer> Customers { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

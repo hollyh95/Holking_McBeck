@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class Test
     {
@@ -25,7 +26,7 @@ namespace INTEX.Models
             this.Animals = new HashSet<Animal>();
             this.Equipments = new HashSet<Equipment>();
         }
-    
+
         public int TestID { get; set; }
 
         [DisplayName("Test Name")]
@@ -34,7 +35,7 @@ namespace INTEX.Models
         public Nullable<int> TestTypeID { get; set; }
 
         public Nullable<int> TestEnvironmentID { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AssayTestCatalog> AssayTestCatalogs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

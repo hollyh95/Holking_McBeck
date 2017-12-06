@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class Assay
     {
@@ -22,7 +23,7 @@ namespace INTEX.Models
             this.OrderAssays = new HashSet<OrderAssay>();
             this.LiteratureReferences = new HashSet<LiteratureReference>();
         }
-    
+
         public int AssayID { get; set; }
 
         [DisplayName("Assay Name")]
@@ -33,7 +34,7 @@ namespace INTEX.Models
 
         [DisplayName("Assay Estimated Days to Complete")]
         public Nullable<int> EstimatedDaysToComplete { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AssayTestCatalog> AssayTestCatalogs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

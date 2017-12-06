@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class OrderStatu
     {
@@ -20,12 +21,12 @@ namespace INTEX.Models
         {
             this.Orders = new HashSet<Order>();
         }
-    
+
         public int OrderStatusID { get; set; }
 
         [DisplayName("Order Status Description")]
         public string OrderStatusDesc { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
     }

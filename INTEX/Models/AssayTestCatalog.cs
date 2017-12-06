@@ -12,13 +12,14 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class AssayTestCatalog
     {
         public int TestID { get; set; }
         public int AssayID { get; set; }
         public Nullable<int> TestConditionID { get; set; }
-    
+
         public virtual Assay Assay { get; set; }
         public virtual Test Test { get; set; }
         public virtual TestCondition TestCondition { get; set; }

@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class TestCondition
     {
@@ -21,12 +22,12 @@ namespace INTEX.Models
             this.AssayTestCatalogs = new HashSet<AssayTestCatalog>();
             this.OrderAssayTests = new HashSet<OrderAssayTest>();
         }
-    
+
         public int TestConditionID { get; set; }
 
         [DisplayName("Test Condition Description")]
         public string TestConditionDesc { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AssayTestCatalog> AssayTestCatalogs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

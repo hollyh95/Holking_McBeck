@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class Location
     {
@@ -21,7 +22,7 @@ namespace INTEX.Models
             this.Customers = new HashSet<Customer>();
             this.Employees = new HashSet<Employee>();
         }
-    
+
         public int LocID { get; set; }
 
         [DisplayName("City")]
@@ -33,7 +34,7 @@ namespace INTEX.Models
         public string Zip { get; set; }
 
         public Nullable<int> CountryID { get; set; }
-    
+
         public virtual Country Country { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Customer> Customers { get; set; }

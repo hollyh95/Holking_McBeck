@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class Compound
     {
@@ -20,13 +21,13 @@ namespace INTEX.Models
         {
             this.CompoundSamples = new HashSet<CompoundSample>();
         }
-    
+
         public int LabsTestID { get; set; }
 
         [DisplayName("Compound Name")]
         public string CompoundName { get; set; }
         public Nullable<decimal> MaximumToleratedDose { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CompoundSample> CompoundSamples { get; set; }
     }

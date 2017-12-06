@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class Equipment
     {
@@ -21,7 +22,7 @@ namespace INTEX.Models
             this.SampleTestEquipments = new HashSet<SampleTestEquipment>();
             this.Tests = new HashSet<Test>();
         }
-    
+
         public int EquipmentID { get; set; }
 
         [DisplayName("Equipment Description")]
@@ -32,7 +33,7 @@ namespace INTEX.Models
 
         [DisplayName("Cost Per Hour")]
         public Nullable<decimal> CostPerHour { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SampleTestEquipment> SampleTestEquipments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

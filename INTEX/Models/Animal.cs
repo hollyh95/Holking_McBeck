@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class Animal
     {
@@ -21,7 +22,7 @@ namespace INTEX.Models
             this.SampleTests = new HashSet<SampleTest>();
             this.Tests = new HashSet<Test>();
         }
-        
+
         public int AnimalID { get; set; }
 
         [DisplayName("Animal Description")]
@@ -29,7 +30,7 @@ namespace INTEX.Models
 
         [DisplayName("Animal Cost")]
         public Nullable<decimal> AnimalCost { get; set; }
-    
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SampleTest> SampleTests { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -12,6 +12,7 @@ namespace INTEX.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class SampleTestMaterial
     {
@@ -20,7 +21,7 @@ namespace INTEX.Models
 
         [DisplayName("Material Amount Used (kilograms)")]
         public Nullable<int> MaterialAmountActual { get; set; }
-    
+
         public virtual Material Material { get; set; }
         public virtual SampleTest SampleTest { get; set; }
     }
