@@ -26,9 +26,14 @@ namespace INTEX.Models
         public int AnimalID { get; set; }
 
         [DisplayName("Animal Description")]
+        [RegularExpression(@"^A-Za-z\s*$", ErrorMessage = "Must be alphabetic characters or white space.")]
+        [Required]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string AnimalDesc { get; set; }
 
         [DisplayName("Animal Cost")]
+        [Required]
+        [DataType(DataType.Currency, ErrorMessage = "Please enter cost of animal in US dollars.")]
         public Nullable<decimal> AnimalCost { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

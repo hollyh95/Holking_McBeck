@@ -20,6 +20,7 @@ namespace INTEX.Models
         public int SampleTestID { get; set; }
 
         [DisplayName("Material Amount Used (kilograms)")]
+        [Required]
         public Nullable<int> MaterialAmountActual { get; set; }
 
         public virtual Material Material { get; set; }

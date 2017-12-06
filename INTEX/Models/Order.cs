@@ -27,14 +27,18 @@ namespace INTEX.Models
         public Nullable<int> CustID { get; set; }
 
         [DisplayName("Order Comments")]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string OrderComments { get; set; }
 
         public Nullable<int> OrderStatusID { get; set; }
 
         [DisplayName("Order Discount (Dollars)")]
+        [DataType(DataType.Currency, ErrorMessage = "Please enter the order discount in US Dollars.")]
         public Nullable<decimal> OrderDiscount { get; set; }
 
         [DisplayName("Quoted Price")]
+        [Required]
+        [DataType(DataType.Currency, ErrorMessage = "Please enter the quoted price in US Dollars.")]
         public Nullable<decimal> QuotedPrice { get; set; }
 
         [DisplayName("Order Urgent")]

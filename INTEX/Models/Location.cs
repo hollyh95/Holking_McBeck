@@ -26,11 +26,17 @@ namespace INTEX.Models
         public int LocID { get; set; }
 
         [DisplayName("City")]
+        [Required]
+        [RegularExpression(@"^[A-Z][a-zA-Z]", ErrorMessage = "Cities can only have alphabetic characters.")]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string City { get; set; }
 
         public Nullable<int> RegionID { get; set; }
 
         [DisplayName("Postal Code")]
+        [Required]
+        [RegularExpression(@"^[0-9\-]", ErrorMessage = "Postal codes can only have numbers and dashes")]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string Zip { get; set; }
 
         public Nullable<int> CountryID { get; set; }

@@ -25,6 +25,8 @@ namespace INTEX.Models
         public int EmpTypeID { get; set; }
 
         [DisplayName("Employee Type Description")]
+        [Required]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string EmpTypeDesc { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

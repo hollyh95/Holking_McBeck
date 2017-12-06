@@ -30,6 +30,8 @@ namespace INTEX.Models
         public int TestID { get; set; }
 
         [DisplayName("Test Name")]
+        [Required]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string TestName { get; set; }
 
         public Nullable<int> TestTypeID { get; set; }

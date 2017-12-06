@@ -25,6 +25,8 @@ namespace INTEX.Models
         public int TestEnvironmentID { get; set; }
 
         [DisplayName("Test Environment Description")]
+        [Required]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string TestEnvironmentDesc { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

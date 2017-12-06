@@ -20,6 +20,7 @@ namespace INTEX.Models
         public int MaterialID { get; set; }
 
         [DisplayName("Estimated Material Amount (kilograms)")]
+        [Required]
         public int MaterialAmountEst { get; set; }
 
         public virtual Material Material { get; set; }

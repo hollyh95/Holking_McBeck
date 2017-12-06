@@ -20,6 +20,7 @@ namespace INTEX.Models
         public int SampleTestID { get; set; }
 
         [DisplayName("Hours Worked")]
+        [Required]
         public Nullable<int> HoursWorked { get; set; }
 
         public virtual Employee Employee { get; set; }

@@ -25,6 +25,8 @@ namespace INTEX.Models
         public int RegionID { get; set; }
 
         [DisplayName("Region Name")]
+        [Required]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string RegionName { get; set; }
 
         public Nullable<int> CountryID { get; set; }

@@ -33,12 +33,5 @@ namespace INTEX.Controllers
 
             return View();
         }
-
-        public ActionResult Employee()
-        {
-            ViewBag.Message = "Employee Portal";
-
-            return View();
-        }
     }
 }

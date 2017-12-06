@@ -24,13 +24,17 @@ namespace INTEX.Models
         }
 
         public int OrderAssayID { get; set; }
+
         public Nullable<int> OrderID { get; set; }
+
         public Nullable<int> AssayID { get; set; }
 
         [DisplayName("Start Date and Time")]
+        [DataType(DataType.DateTime, ErrorMessage = "Please enter a valid start date and time")]
         public Nullable<System.DateTime> StartDateTime { get; set; }
 
         [DisplayName("End Date and Time")]
+        [DataType(DataType.DateTime, ErrorMessage = "Please enter a valid end date and time")]
         public Nullable<System.DateTime> EndDateTime { get; set; }
 
         public Nullable<int> StatusID { get; set; }

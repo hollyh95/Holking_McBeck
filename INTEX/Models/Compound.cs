@@ -25,7 +25,12 @@ namespace INTEX.Models
         public int LabsTestID { get; set; }
 
         [DisplayName("Compound Name")]
+        [Required]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string CompoundName { get; set; }
+
+        [DisplayName("Maximum Tolerated Dose (milligrams)")]
+        [Required]
         public Nullable<decimal> MaximumToleratedDose { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

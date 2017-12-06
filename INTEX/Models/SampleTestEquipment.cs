@@ -21,6 +21,7 @@ namespace INTEX.Models
         public int SampleTestID { get; set; }
 
         [DisplayName("Hours Used")]
+        [Required]
         public Nullable<decimal> HoursUsed { get; set; }
 
         public virtual Equipment Equipment { get; set; }
