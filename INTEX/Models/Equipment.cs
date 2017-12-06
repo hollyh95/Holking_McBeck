@@ -11,7 +11,8 @@ namespace INTEX.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class Equipment
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,8 +23,14 @@ namespace INTEX.Models
         }
     
         public int EquipmentID { get; set; }
+
+        [DisplayName("Equipment Description")]
         public string EquipmentDesc { get; set; }
+
+        [DisplayName("Purchase Cost")]
         public Nullable<decimal> PurchaseCost { get; set; }
+
+        [DisplayName("Cost Per Hour")]
         public Nullable<decimal> CostPerHour { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

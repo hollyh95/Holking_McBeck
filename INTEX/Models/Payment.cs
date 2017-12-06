@@ -11,13 +11,20 @@ namespace INTEX.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class Payment
     {
         public int PaymentID { get; set; }
+
         public Nullable<int> InvoiceID { get; set; }
+
+        [DisplayName("Payment Amount")]
         public Nullable<decimal> PaymentAmt { get; set; }
+
+        [DisplayName("Payment Date Received")]
         public Nullable<System.DateTime> PaymentDate { get; set; }
+
         public Nullable<int> PaymentTypeID { get; set; }
     
         public virtual Invoice Invoice { get; set; }

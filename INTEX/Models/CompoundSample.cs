@@ -11,7 +11,8 @@ namespace INTEX.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class CompoundSample
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,16 +23,37 @@ namespace INTEX.Models
     
         public int CompoundSampleID { get; set; }
         public Nullable<int> LabsTestID { get; set; }
+
+        [DisplayName("Compound Sequence Code")]
         public Nullable<int> CompoundSequenceCode { get; set; }
+
+        [DisplayName("Quantity in milligrams")]
         public Nullable<int> Quantity_MG_ { get; set; }
+
+        [DisplayName("Date Arrived")]
         public Nullable<System.DateTime> DateArrived { get; set; }
+
         public Nullable<int> EmpID { get; set; }
+
+        [DisplayName("Date Due")]
         public Nullable<System.DateTime> DateDue { get; set; }
+
+        [DisplayName("Appearance")]
         public string Appearance { get; set; }
+
+        [DisplayName("Weight Measured by Customer in grams")]
         public Nullable<decimal> CustomerWeight { get; set; }
+
+        [DisplayName("Molecular Mass g/mol")]
         public Nullable<decimal> MolecularMass { get; set; }
+
+        [DisplayName("Recept Confirmation Date and Time")]
         public Nullable<System.DateTime> ReceiptConfirmationDateTime { get; set; }
+
+        [DisplayName("Actual Weight (If customer measured incorrectly)")]
         public Nullable<decimal> ActualWeight { get; set; }
+
+        [DisplayName("Is Solubilized")]
         public Nullable<int> Solubilized { get; set; }
     
         public virtual Compound Compound { get; set; }

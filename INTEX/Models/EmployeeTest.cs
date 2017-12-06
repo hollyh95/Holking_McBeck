@@ -11,11 +11,14 @@ namespace INTEX.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class EmployeeTest
     {
         public int EmpID { get; set; }
         public int SampleTestID { get; set; }
+
+        [DisplayName("Hours Worked")]
         public Nullable<int> HoursWorked { get; set; }
     
         public virtual Employee Employee { get; set; }

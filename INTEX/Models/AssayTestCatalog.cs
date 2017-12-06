@@ -11,7 +11,8 @@ namespace INTEX.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class AssayTestCatalog
     {
         public int TestID { get; set; }

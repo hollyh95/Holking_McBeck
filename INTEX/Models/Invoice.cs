@@ -11,7 +11,8 @@ namespace INTEX.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class Invoice
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,11 +23,23 @@ namespace INTEX.Models
     
         public int InvoiceID { get; set; }
         public Nullable<int> OrderID { get; set; }
+
+        [DisplayName("Payment Due Date")]
         public Nullable<System.DateTime> PaymentDueDate { get; set; }
+
+        [DisplayName("Early Payment Date")]
         public Nullable<System.DateTime> EarlyPaymentDate { get; set; }
+
+        [DisplayName("Early Payment Discount (Dollars)")]
         public Nullable<decimal> EarlyPaymentDiscount { get; set; }
+
+        [DisplayName("Date Sent")]
         public Nullable<System.DateTime> SentDate { get; set; }
+
+        [DisplayName("Advanced Payment Amount")]
         public Nullable<decimal> AdvancedAmount { get; set; }
+
+        [DisplayName("Running Balance")]
         public Nullable<decimal> RunningBalance { get; set; }
     
         public virtual Order Order { get; set; }

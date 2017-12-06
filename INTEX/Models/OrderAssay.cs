@@ -11,7 +11,8 @@ namespace INTEX.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class OrderAssay
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -24,8 +25,13 @@ namespace INTEX.Models
         public int OrderAssayID { get; set; }
         public Nullable<int> OrderID { get; set; }
         public Nullable<int> AssayID { get; set; }
+
+        [DisplayName("Start Date and Time")]
         public Nullable<System.DateTime> StartDateTime { get; set; }
+
+        [DisplayName("End Date and Time")]
         public Nullable<System.DateTime> EndDateTime { get; set; }
+
         public Nullable<int> StatusID { get; set; }
     
         public virtual Assay Assay { get; set; }

@@ -11,11 +11,14 @@ namespace INTEX.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class SampleTestMaterial
     {
         public int MaterialID { get; set; }
         public int SampleTestID { get; set; }
+
+        [DisplayName("Material Amount Used (kilograms)")]
         public Nullable<int> MaterialAmountActual { get; set; }
     
         public virtual Material Material { get; set; }

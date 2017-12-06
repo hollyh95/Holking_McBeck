@@ -11,6 +11,7 @@ namespace INTEX.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
 
     public partial class User
     {
@@ -21,7 +22,10 @@ namespace INTEX.Models
             this.Employees = new HashSet<Employee>();
         }
 
+        [DisplayName("Username")]
         public string UserID { get; set; }
+
+        [DisplayName("Password")]
         public string Password { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

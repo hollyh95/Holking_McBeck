@@ -11,7 +11,8 @@ namespace INTEX.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class Employee
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,18 +23,41 @@ namespace INTEX.Models
         }
     
         public int EmpID { get; set; }
+
+        [DisplayName("First Name")]
         public string EmpFirstName { get; set; }
+
+        [DisplayName("Last Name")]
         public string EmpLastName { get; set; }
+
+        [DisplayName("Date of Birth")]
         public Nullable<System.DateTime> EmpDOB { get; set; }
+
+        [DisplayName("Social Security Number")]
         public string EmpSSN { get; set; }
+
+        [DisplayName("Phone Number")]
         public string EmpPhone { get; set; }
+
+        [DisplayName("Email")]
         public string EmpEmail { get; set; }
+
+        [DisplayName("Street Address 1")]
         public string EmpStreetAddress1 { get; set; }
+
+        [DisplayName("Street Address 2")]
         public string EmpStreetAddress2 { get; set; }
+
         public Nullable<int> LocID { get; set; }
+
         public Nullable<int> AuthID { get; set; }
+
+        [DisplayName("Wage (Dollars per Hour)")]
+
         public Nullable<decimal> Wage { get; set; }
+
         public string UserID { get; set; }
+
         public Nullable<int> EmpTypeID { get; set; }
     
         public virtual Authorization Authorization { get; set; }

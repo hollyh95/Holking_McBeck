@@ -11,7 +11,8 @@ namespace INTEX.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class SampleTest
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -24,13 +25,26 @@ namespace INTEX.Models
         }
     
         public int SampleTestID { get; set; }
+
         public Nullable<int> OrderAssayID { get; set; }
+
         public Nullable<int> TestID { get; set; }
+
         public Nullable<int> CompoundSampleID { get; set; }
+
+        [DisplayName("Test Conducting Cost")]
         public Nullable<decimal> ConductingCost { get; set; }
+
+        [DisplayName("Base Price")]
         public Nullable<decimal> BasePrice { get; set; }
+
+        [DisplayName("Test Sample Weight")]
         public Nullable<int> SampleTestWeight { get; set; }
+
+        [DisplayName("Test Sample Concentration (mg/mL)")]
         public Nullable<decimal> SampleTestConcentration { get; set; }
+
+        [DisplayName("Test Completed")]
         public Nullable<int> TestCompleted { get; set; }
     
         public virtual CompoundSample CompoundSample { get; set; }

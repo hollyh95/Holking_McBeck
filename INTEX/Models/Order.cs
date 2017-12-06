@@ -11,7 +11,8 @@ namespace INTEX.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class Order
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -23,11 +24,22 @@ namespace INTEX.Models
     
         public int OrderID { get; set; }
         public Nullable<int> CustID { get; set; }
+
+        [DisplayName("Order Comments")]
         public string OrderComments { get; set; }
+
         public Nullable<int> OrderStatusID { get; set; }
+
+        [DisplayName("Order Discount (Dollars)")]
         public Nullable<decimal> OrderDiscount { get; set; }
+
+        [DisplayName("Quoted Price")]
         public Nullable<decimal> QuotedPrice { get; set; }
+
+        [DisplayName("Order Urgent")]
         public Nullable<int> OrderUrgency { get; set; }
+
+        [DisplayName("Order Approved by Customer")]
         public Nullable<int> OrderApproval { get; set; }
     
         public virtual Customer Customer { get; set; }

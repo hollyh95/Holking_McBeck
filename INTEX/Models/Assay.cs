@@ -11,7 +11,8 @@ namespace INTEX.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class Assay
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -23,8 +24,14 @@ namespace INTEX.Models
         }
     
         public int AssayID { get; set; }
+
+        [DisplayName("Assay Name")]
         public string AssayName { get; set; }
+
+        [DisplayName("Assay Protocol")]
         public string AssayProtocol { get; set; }
+
+        [DisplayName("Assay Estimated Days to Complete")]
         public Nullable<int> EstimatedDaysToComplete { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

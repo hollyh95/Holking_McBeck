@@ -11,7 +11,8 @@ namespace INTEX.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class Animal
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,9 +21,13 @@ namespace INTEX.Models
             this.SampleTests = new HashSet<SampleTest>();
             this.Tests = new HashSet<Test>();
         }
-    
+        
         public int AnimalID { get; set; }
+
+        [DisplayName("Animal Description")]
         public string AnimalDesc { get; set; }
+
+        [DisplayName("Animal Cost")]
         public Nullable<decimal> AnimalCost { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

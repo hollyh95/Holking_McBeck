@@ -11,13 +11,17 @@ namespace INTEX.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class OrderAssayTest
     {
         public int OrderAssayID { get; set; }
         public int TestID { get; set; }
         public Nullable<int> TestConditionID { get; set; }
+
+        [DisplayName("Test Conclusive")]
         public Nullable<int> TestConclusive { get; set; }
+
         public Nullable<int> StatusID { get; set; }
     
         public virtual OrderAssay OrderAssay { get; set; }

@@ -11,7 +11,8 @@ namespace INTEX.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class Customer
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,14 +22,29 @@ namespace INTEX.Models
         }
     
         public int CustID { get; set; }
+
+        [DisplayName("Name")]
         public string CustName { get; set; }
+
+        [DisplayName("Customer Date of Birth")]
         public Nullable<System.DateTime> CustDOB { get; set; }
+
+        [DisplayName("Phone Number")]
         public string CustPhone { get; set; }
+
+        [DisplayName("Email")]
         public string CustEmail { get; set; }
+
+        [DisplayName("Street Address 1")]
         public string CustStreetAddress1 { get; set; }
+
+        [DisplayName("Street Address 2")]
         public string CustStreetAddress2 { get; set; }
+
         public Nullable<int> LocID { get; set; }
+
         public Nullable<int> AuthID { get; set; }
+
         public string UserID { get; set; }
     
         public virtual Authorization Authorization { get; set; }

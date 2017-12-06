@@ -11,11 +11,15 @@ namespace INTEX.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class SampleTestEquipment
     {
         public int EquipmentID { get; set; }
+
         public int SampleTestID { get; set; }
+
+        [DisplayName("Hours Used")]
         public Nullable<decimal> HoursUsed { get; set; }
     
         public virtual Equipment Equipment { get; set; }

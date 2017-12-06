@@ -11,7 +11,8 @@ namespace INTEX.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class Test
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -26,8 +27,12 @@ namespace INTEX.Models
         }
     
         public int TestID { get; set; }
+
+        [DisplayName("Test Name")]
         public string TestName { get; set; }
+
         public Nullable<int> TestTypeID { get; set; }
+
         public Nullable<int> TestEnvironmentID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

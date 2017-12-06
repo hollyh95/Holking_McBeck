@@ -11,7 +11,8 @@ namespace INTEX.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+
     public partial class Material
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,8 +23,14 @@ namespace INTEX.Models
         }
     
         public int MaterialID { get; set; }
+
+        [DisplayName("Material Name")]
         public string MaterialName { get; set; }
+
+        [DisplayName("Material Cost per Kilogram")]
         public Nullable<decimal> MaterialCostPerKg { get; set; }
+
+        [DisplayName("Materials on Hand (kilograms)")]
         public Nullable<decimal> MaterialOnHand { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
