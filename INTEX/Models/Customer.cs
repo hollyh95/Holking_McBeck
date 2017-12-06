@@ -26,28 +26,29 @@ namespace INTEX.Models
 
         [DisplayName("Name")]
         [Required]
-        [StringLength(30, MinimumLength = 3, ErrorMessage = "Field must be from 3 to 30 characters.")]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string CustName { get; set; }
 
         [DisplayName("Phone Number")]
         [DataType(DataType.PhoneNumber, ErrorMessage = "Please enter a valid phone number.")]
+        [RegularExpression(@"^[0-9]*$", ErrorMessage = "Please enter only the phone number digits.")]
         [Required]
-        [StringLength(30, MinimumLength = 3, ErrorMessage = "Field must be from 3 to 30 characters.")]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string CustPhone { get; set; }
 
         [DisplayName("Email")]
         [DataType(DataType.EmailAddress, ErrorMessage = "Please enter a valid email address.")]
         [Required]
-        [StringLength(30, MinimumLength = 3, ErrorMessage = "Field must be from 3 to 30 characters.")]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string CustEmail { get; set; }
 
         [DisplayName("Street Address 1")]
         [Required]
-        [StringLength(30, MinimumLength = 3, ErrorMessage = "Field must be from 3 to 30 characters.")]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string CustStreetAddress1 { get; set; }
 
         [DisplayName("Street Address 2")]
-        [StringLength(30, MinimumLength = 3, ErrorMessage = "Field must be from 3 to 30 characters.")]
+        [StringLength(30, ErrorMessage = "Field must be no longer than 30 characters.")]
         public string CustStreetAddress2 { get; set; }
 
         public Nullable<int> LocID { get; set; }
