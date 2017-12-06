@@ -264,6 +264,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\colors.jpg" />
     <Content Include="Content\Images\labimage.jpg" />
+    <Content Include="Content\Images\microscope.jpg" />
     <Content Include="Content\Images\patient.png" />
     <Content Include="Content\Images\solutions.png" />
     <Content Include="Content\simplex.bootsrap.css" />
