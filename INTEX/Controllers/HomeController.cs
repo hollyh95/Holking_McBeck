@@ -33,5 +33,12 @@ namespace INTEX.Controllers
 
             return View();
         }
+
+        public ActionResult Admin()
+        {
+            ViewBag.Message = "Admin Portal";
+
+            return View();
+        }
     }
 }
