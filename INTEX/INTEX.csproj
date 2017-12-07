@@ -196,6 +196,7 @@
     <Compile Include="Models\Invoice.cs">
       <DependentUpon>northwestdatabase.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\Invoices1Controller.cs" />
     <Compile Include="Models\LiteratureReference.cs">
       <DependentUpon>northwestdatabase.tt</DependentUpon>
     </Compile>
@@ -360,6 +361,11 @@
     <Content Include="Views\Employees\Details.cshtml" />
     <Content Include="Views\Employees\Edit.cshtml" />
     <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Invoices1\Create.cshtml" />
+    <Content Include="Views\Invoices1\Delete.cshtml" />
+    <Content Include="Views\Invoices1\Details.cshtml" />
+    <Content Include="Views\Invoices1\Edit.cshtml" />
+    <Content Include="Views\Invoices1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

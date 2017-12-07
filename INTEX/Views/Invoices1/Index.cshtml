@@ -1,0 +1,69 @@
+﻿@model IEnumerable<INTEX.Models.Invoice>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentDueDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EarlyPaymentDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EarlyPaymentDiscount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SentDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AdvancedAmount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RunningBalance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Order.OrderComments)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaymentDueDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EarlyPaymentDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EarlyPaymentDiscount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SentDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdvancedAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RunningBalance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Order.OrderComments)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.InvoiceID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.InvoiceID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.InvoiceID })
+        </td>
+    </tr>
+}
+
+</table>
