@@ -53,6 +53,7 @@ namespace INTEX.Models
 
         public Nullable<int> LocID { get; set; }
 
+        
         public Nullable<int> AuthID { get; set; }
 
         public string UserID { get; set; }
