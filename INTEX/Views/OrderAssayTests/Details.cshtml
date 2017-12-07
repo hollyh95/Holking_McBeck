@@ -1,0 +1,58 @@
+﻿@model INTEX.Models.OrderAssayTest
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OrderAssayTest</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TestConclusive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TestConclusive)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderAssay.OrderAssayID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderAssay.OrderAssayID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status.StatusDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status.StatusDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Test.TestName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Test.TestName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TestCondition.TestConditionDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TestCondition.TestConditionDesc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

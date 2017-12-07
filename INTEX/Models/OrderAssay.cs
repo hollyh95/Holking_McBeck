@@ -31,6 +31,7 @@ namespace INTEX.Models
 
         [DisplayName("Start Date and Time")]
         [DataType(DataType.DateTime, ErrorMessage = "Please enter a valid start date and time")]
+        //[DisplayFormat(DataFormatString = "{0:f}", ApplyFormatInEditMode = true)]
         public Nullable<System.DateTime> StartDateTime { get; set; }
 
         [DisplayName("End Date and Time")]
