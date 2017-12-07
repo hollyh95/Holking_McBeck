@@ -150,8 +150,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AssayTestCatalogsController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrderAssayTests1Controller.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -371,6 +373,16 @@
     <Content Include="Views\Invoices1\Index.cshtml" />
     <Content Include="Views\Home\Payments.cshtml" />
     <Content Include="Views\Home\ClientOrders.cshtml" />
+    <Content Include="Views\AssayTestCatalogs\Create.cshtml" />
+    <Content Include="Views\AssayTestCatalogs\Delete.cshtml" />
+    <Content Include="Views\AssayTestCatalogs\Details.cshtml" />
+    <Content Include="Views\AssayTestCatalogs\Edit.cshtml" />
+    <Content Include="Views\AssayTestCatalogs\Index.cshtml" />
+    <Content Include="Views\OrderAssayTests1\Create.cshtml" />
+    <Content Include="Views\OrderAssayTests1\Delete.cshtml" />
+    <Content Include="Views\OrderAssayTests1\Details.cshtml" />
+    <Content Include="Views\OrderAssayTests1\Edit.cshtml" />
+    <Content Include="Views\OrderAssayTests1\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
