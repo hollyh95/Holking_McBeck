@@ -75,5 +75,19 @@ namespace INTEX.Controllers
 
             return View();
         }
+
+        public ActionResult Payments()
+        {
+            ViewBag.Message = "Payments";
+
+            return View();
+        }
+
+        public ActionResult ClientOrders()
+        {
+            ViewBag.Message = "ClientOrders";
+
+            return View();
+        }
     }
 }

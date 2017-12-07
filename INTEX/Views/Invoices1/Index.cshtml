@@ -1,16 +1,19 @@
 ﻿@model IEnumerable<INTEX.Models.Invoice>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Invoices";
 }
 
-<h2>Index</h2>
+<h2>Invoices</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Order.Customer)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.PaymentDueDate)
         </th>
@@ -29,14 +32,15 @@
         <th>
             @Html.DisplayNameFor(model => model.RunningBalance)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Order.OrderComments)
-        </th>
+
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Order.Customer.CustName)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.PaymentDueDate)
         </td>
@@ -55,9 +59,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.RunningBalance)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Order.OrderComments)
-        </td>
+
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.InvoiceID }) |
             @Html.ActionLink("Details", "Details", new { id=item.InvoiceID }) |
