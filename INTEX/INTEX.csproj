@@ -183,6 +183,7 @@
     <Compile Include="Models\Employee.cs">
       <DependentUpon>northwestdatabase.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Models\EmployeeTest.cs">
       <DependentUpon>northwestdatabase.tt</DependentUpon>
     </Compile>
@@ -195,7 +196,6 @@
     <Compile Include="Models\Invoice.cs">
       <DependentUpon>northwestdatabase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\InvoicesController.cs" />
     <Compile Include="Models\LiteratureReference.cs">
       <DependentUpon>northwestdatabase.tt</DependentUpon>
     </Compile>
@@ -355,11 +355,11 @@
     <Content Include="Views\Assays\Details.cshtml" />
     <Content Include="Views\Assays\Edit.cshtml" />
     <Content Include="Views\Assays\Index.cshtml" />
-    <Content Include="Views\Invoices\Create.cshtml" />
-    <Content Include="Views\Invoices\Delete.cshtml" />
-    <Content Include="Views\Invoices\Details.cshtml" />
-    <Content Include="Views\Invoices\Edit.cshtml" />
-    <Content Include="Views\Invoices\Index.cshtml" />
+    <Content Include="Views\Employees\Create.cshtml" />
+    <Content Include="Views\Employees\Delete.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Edit.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
