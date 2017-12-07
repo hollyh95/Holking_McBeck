@@ -1,10 +1,12 @@
 ﻿
 @{
-    ViewBag.Title = "Pharmacolgy";
+    ViewBag.Title = "Pharmacology";
 }
 
 <h2>Pharmacolgy</h2>
 
-<div>@Html.ActionLink("Update Assay »", "Contact", "Home", null, new { @class = "btn btn-outline-info" })</div>
+<div>@Html.ActionLink("Work Order Schedule »", "WorkOrderSchedule", "Home", null, new { @class = "btn btn-outline-info" })</div>
 <br />
-<div>@Html.ActionLink("View Assay Results »", "Contact", "Home", null, new { @class = "btn btn-outline-info" })</div>
+<div>@Html.ActionLink("Create Assay »", "Create", "Assays", null, new { @class = "btn btn-outline-info" })</div>
+<br />
+<div>@Html.ActionLink("View Assay Results »", "Index", "Assays", null, new { @class = "btn btn-outline-info" })</div>
