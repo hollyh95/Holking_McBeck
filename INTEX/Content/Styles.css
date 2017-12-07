@@ -31,12 +31,7 @@
     padding: 3px;
 }
 
-.buttonsetwidth {
-{
-    color: #029ACF;
-    background-color: transparent;
-    background-image: none;
-    border-color: #029ACF;
-    width: 800px;
+* {
+    margin: 0;
 }
-}
+
