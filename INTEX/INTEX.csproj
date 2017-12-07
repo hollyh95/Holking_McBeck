@@ -161,6 +161,7 @@
     <Compile Include="Models\Assay.cs">
       <DependentUpon>northwestdatabase.tt</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\AssaysController.cs" />
     <Compile Include="Models\AssayTestCatalog.cs">
       <DependentUpon>northwestdatabase.tt</DependentUpon>
     </Compile>
@@ -346,6 +347,13 @@
     <Content Include="Views\Home\Employee.cshtml" />
     <Content Include="Views\Home\SalesRep.cshtml" />
     <Content Include="Views\Home\Pharmacology.cshtml" />
+    <Content Include="Views\Home\CurrentPricing.cshtml" />
+    <Content Include="Views\Home\WorkOrderSchedule.cshtml" />
+    <Content Include="Views\Assays\Create.cshtml" />
+    <Content Include="Views\Assays\Delete.cshtml" />
+    <Content Include="Views\Assays\Details.cshtml" />
+    <Content Include="Views\Assays\Edit.cshtml" />
+    <Content Include="Views\Assays\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

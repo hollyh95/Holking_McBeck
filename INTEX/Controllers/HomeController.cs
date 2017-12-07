@@ -55,9 +55,23 @@ namespace INTEX.Controllers
             return View();
         }
 
-        public ActionResult Pharmacolgy()
+        public ActionResult Pharmacology()
         {
-            ViewBag.Message = "Pharmacolgy Portal";
+            ViewBag.Message = "Pharmacology Portal";
+
+            return View();
+        }
+
+        public ActionResult CurrentPricing()
+        {
+            ViewBag.Message = "CurrentPricing";
+
+            return View();
+        }
+
+        public ActionResult WorkOrderSchedule()
+        {
+            ViewBag.Message = "WorkOrderSchedule";
 
             return View();
         }
