@@ -1,0 +1,58 @@
+﻿@model INTEX.Models.OrderAssay
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>OrderAssay</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Assay.AssayName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Assay.AssayName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Order.OrderComments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Order.OrderComments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status.StatusDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status.StatusDesc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OrderAssayID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
