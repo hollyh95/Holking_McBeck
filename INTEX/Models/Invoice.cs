@@ -24,6 +24,7 @@ namespace INTEX.Models
 
         public int InvoiceID { get; set; }
 
+        [DisplayName("Order Number")]
         public Nullable<int> OrderID { get; set; }
 
         [DisplayName("Payment Due Date")]

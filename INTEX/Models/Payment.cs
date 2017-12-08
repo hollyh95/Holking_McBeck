@@ -25,9 +25,9 @@ namespace INTEX.Models
         [DataType(DataType.Currency, ErrorMessage = "Enter the payment amount in US Dollars.")]
         public Nullable<decimal> PaymentAmt { get; set; }
 
-        [DisplayName("Payment Date and Time Received")]
+        [DisplayName("Payment Date Received")]
         [Required]
-        [DataType(DataType.DateTime, ErrorMessage = "Please enter a valid date and time.")]
+        [DataType(DataType.Date, ErrorMessage = "Please enter a valid date.")]
         public Nullable<System.DateTime> PaymentDate { get; set; }
 
         public Nullable<int> PaymentTypeID { get; set; }
