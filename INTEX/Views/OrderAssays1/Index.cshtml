@@ -1,0 +1,57 @@
+﻿@model IEnumerable<INTEX.Models.OrderAssay>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Assay Orders</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndDateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Assay.AssayName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Order.OrderComments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status.StatusDesc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartDateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndDateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Assay.AssayName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Order.OrderComments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status.StatusDesc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.OrderAssayID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.OrderAssayID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.OrderAssayID })
+        </td>
+    </tr>
+}
+
+</table>

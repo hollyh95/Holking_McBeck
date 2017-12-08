@@ -1,0 +1,74 @@
+﻿@model INTEX.Models.Order
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderComments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderComments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderDiscount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderDiscount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.QuotedPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuotedPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderUrgency)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderUrgency)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderApproval)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderApproval)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.CustName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.CustName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderStatu.OrderStatusDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OrderStatu.OrderStatusDesc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OrderID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

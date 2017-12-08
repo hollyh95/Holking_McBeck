@@ -153,7 +153,9 @@
     <Compile Include="Controllers\AssayTestCatalogsController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrderAssays1Controller.cs" />
     <Compile Include="Controllers\OrderAssayTests1Controller.cs" />
+    <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -383,6 +385,16 @@
     <Content Include="Views\OrderAssayTests1\Details.cshtml" />
     <Content Include="Views\OrderAssayTests1\Edit.cshtml" />
     <Content Include="Views\OrderAssayTests1\Index.cshtml" />
+    <Content Include="Views\OrderAssays1\Create.cshtml" />
+    <Content Include="Views\OrderAssays1\Delete.cshtml" />
+    <Content Include="Views\OrderAssays1\Details.cshtml" />
+    <Content Include="Views\OrderAssays1\Edit.cshtml" />
+    <Content Include="Views\OrderAssays1\Index.cshtml" />
+    <Content Include="Views\Orders\Create.cshtml" />
+    <Content Include="Views\Orders\Delete.cshtml" />
+    <Content Include="Views\Orders\Details.cshtml" />
+    <Content Include="Views\Orders\Edit.cshtml" />
+    <Content Include="Views\Orders\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

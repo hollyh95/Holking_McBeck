@@ -50,13 +50,13 @@
             @Html.DisplayFor(model => model.CustStreetAddress2)
         </dd>
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.Authorization.AuthName)
-        </dt>
+        </dt>*@
 
-        <dd>
+        @*<dd>
             @Html.DisplayFor(model => model.Authorization.AuthName)
-        </dd>
+        </dd>*@
 
         <dt>
             @Html.DisplayNameFor(model => model.Location.City)
@@ -67,12 +67,36 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Location.Zip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location.Zip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location.Region.RegionName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location.Region.RegionName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location.Country.CountryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location.Country.CountryName)
+        </dd>
+
+        @*<dt>
             @Html.DisplayNameFor(model => model.User.Password)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.User.Password)
-        </dd>
+        </dd>*@
 
     </dl>
 </div>
