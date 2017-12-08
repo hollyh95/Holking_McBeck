@@ -36,6 +36,7 @@ namespace INTEX.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult Admin()
         {
             ViewBag.Message = "Admin Portal";
