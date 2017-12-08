@@ -23,6 +23,7 @@ namespace INTEX.Models
             this.OrderAssays = new HashSet<OrderAssay>();
         }
 
+        [DisplayName("Order Number")]
         public int OrderID { get; set; }
         public Nullable<int> CustID { get; set; }
 

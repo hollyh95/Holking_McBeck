@@ -15,6 +15,9 @@
             @Html.DisplayNameFor(model => model.Order.Customer)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Order.OrderID)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.PaymentDueDate)
         </th>
         <th>
@@ -40,6 +43,9 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Order.Customer.CustName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Order.OrderID)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.PaymentDueDate)

@@ -38,7 +38,7 @@ namespace INTEX.Models
         // GET: Invoices1/Create
         public ActionResult Create()
         {
-            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderComments");
+            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderID");
             return View();
         }
 
@@ -56,7 +56,7 @@ namespace INTEX.Models
                 return RedirectToAction("Index");
             }
 
-            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderComments", invoice.OrderID);
+            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderID", invoice.OrderID);
             return View(invoice);
         }
 
@@ -72,7 +72,7 @@ namespace INTEX.Models
             {
                 return HttpNotFound();
             }
-            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderComments", invoice.OrderID);
+            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderID", invoice.OrderID);
             return View(invoice);
         }
 
@@ -89,7 +89,7 @@ namespace INTEX.Models
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderComments", invoice.OrderID);
+            ViewBag.OrderID = new SelectList(db.Orders, "OrderID", "OrderID", invoice.OrderID);
             return View(invoice);
         }
 
