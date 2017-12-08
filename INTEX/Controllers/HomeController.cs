@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace INTEX.Controllers
 {
@@ -27,6 +28,7 @@ namespace INTEX.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult Client()
         {
             ViewBag.Message = "Client Portal";
@@ -41,6 +43,7 @@ namespace INTEX.Controllers
             return View();
         }
 
+        [Authorize]
         public ActionResult Employee()
         {
             ViewBag.Message = "Employee Portal";
@@ -88,6 +91,31 @@ namespace INTEX.Controllers
             ViewBag.Message = "ClientOrders";
 
             return View();
+        }
+
+        // GET: Home
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(FormCollection form, bool rememberMe = false)
+        {
+            String username = form["Username"].ToString();
+            String password = form["Password"].ToString();
+
+            if (string.Equals(username, "username") && (string.Equals(password, "password")))
+            {
+                FormsAuthentication.SetAuthCookie(username, rememberMe);
+
+                return RedirectToAction("Index", "Home");
+
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }

@@ -407,6 +407,7 @@
     <Content Include="Views\PaymentTypes\Details.cshtml" />
     <Content Include="Views\PaymentTypes\Edit.cshtml" />
     <Content Include="Views\PaymentTypes\Index.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
